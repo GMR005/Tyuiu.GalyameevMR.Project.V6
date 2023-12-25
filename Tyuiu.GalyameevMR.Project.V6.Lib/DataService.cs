@@ -11,7 +11,7 @@ namespace Tyuiu.GalyameevMR.Project.V6.Lib
     {
         public string[,] GetBase(string path)
         {
-            string file = File.ReadAllText(path);
+            string file = File.ReadAllText(path, Encoding.UTF8);
             file = file.Replace('\n', '\r');
             string[] lines = file.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
